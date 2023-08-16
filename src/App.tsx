@@ -1,15 +1,23 @@
-// import { useState } from 'react'
-
+import React from 'react'
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom'
+import PlanetsRoute from './Components/PlanetsRoute'
+import PlanetFact from './Components/PlanetFact'
 import './Index.css'
+import data from './assets/data.json'
 
-const App = () => {
+const App: React.FC = () => {
+
 
 
   return (
-    <div className='w-full min-h-screen p-0 m-0 border-box bg-[#010044]'>
-      <h1 className='text-2xl text-[#905c02] font-antonio'>Planets fact site: font-antonio</h1>
-      <h1 className='text-2xl text-[#905c02] font-spartan'>Planets fact site: Font-spartan</h1>
-    </div>
+    <Router>
+      <div className='flex flex-col w-full min-h-screen p-0 m-0 gap-y-[13.25rem] border-box bg-blackpearl '>
+          <PlanetsRoute data={data}/>
+        <Routes>
+          <Route path='/planet/:planetName' element={<PlanetFact data={data}/>}/>
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

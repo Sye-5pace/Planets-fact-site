@@ -7,13 +7,19 @@ export default {
   ],
   theme: {
     colors:{
-      'alabaster':'#FAFAFA',
-      'woodsmoke':'#111517',
-      'silver': '#c1c1c1',
-      'gray': '#848484',
-      'ebonyclaylight':'#202C36',
-      'ebonyclaydark':'#2B3844',
-      'white': '#fff'
+      'blackpearl':'#070724',
+      'dustygray':'#979797',
+      'brightgray':'#38384F',
+      'waterloo':'#838391',
+      'pelorous':'#419EBB',
+      'tuliptree':'#EDA249',
+      'purpleheart':'#6f2ed6',
+      'valenciadeep':'#D14C32',
+      'valencialight':'#D83A34',
+      'piper':'#CD5120',
+      'java':'#1ec2a4',
+      'royalblue':'#2d68f0',
+      'white':'#fff'
     },
     screens: {
       'mobile': {'min':'200px','max':'427px'},
