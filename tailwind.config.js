@@ -7,6 +7,7 @@ export default {
   ],
   theme: {
     colors:{
+      'alto':'#d8d8d8',
       'blackpearl':'#070724',
       'dustygray':'#979797',
       'brightgray':'#38384F',

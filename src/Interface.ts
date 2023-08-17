@@ -1,5 +1,6 @@
-interface PlanetData {
+export interface PlanetData {
     name: string;
+    color: string;
     overview: ContentSource;
     structure: ContentSource;
     geology: ContentSource;
