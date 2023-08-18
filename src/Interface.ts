@@ -8,7 +8,7 @@ export interface PlanetData {
     revolution: string;
     radius: string;
     temperature: string;
-    images: ImageType
+    images: ImageType;
 }
 
 interface ContentSource {
@@ -24,4 +24,10 @@ interface ImageType {
 
 export interface PlanetsProps {
     data: PlanetData[]
+    selectedPlanet: PlanetData
+}
+
+export interface PlanetMetadataProps {
+    selectedPlanet: PlanetData | undefined;
+
 }
