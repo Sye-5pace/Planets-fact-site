@@ -12,7 +12,7 @@ const PlanetFact:React.FC<PlanetsProps> = ({data}) => {
   
     let content;
     let imgSource;
-    let wikipediaSource;
+    // let wikipediaSource;
     if (selectedTab === 'overview') {
         content = selectedPlanet?.overview.content;
         imgSource = selectedPlanet?.images.planet
@@ -34,7 +34,7 @@ const PlanetFact:React.FC<PlanetsProps> = ({data}) => {
                     <p>Source: <a href={selectedPlanet?.overview.source} className='underline'>Wikipedia</a> </p>
                     <div className='flex flex-col children:py-1 gap-y-3 children:px-4 children:cursor-pointer children:h-[3rem] '>
                         <div onClick={() => setSelectedTab('overview')} className={`flex flex-row items-center gap-10 bg-${selectedPlanet?.color}`}><p>01</p><h3 className='font-bold'>OVERVIEW</h3></div>
-                        <div onClick={() => setSelectedTab('internal')} className='flex flex-row items-center gap-10 border-2 border-dustygray border-opacity-20 hover:bg-alto'><p>02</p><h3 className='font-bold'>INTERNAL STRUCTURE</h3></div>
+                        <div onClick={() => setSelectedTab('structure')} className='flex flex-row items-center gap-10 border-2 border-dustygray border-opacity-20 hover:bg-alto'><p>02</p><h3 className='font-bold'>INTERNAL STRUCTURE</h3></div>
                         <div onClick={() => setSelectedTab('geology')} className='flex flex-row items-center gap-10 border-2 border-dustygray border-opacity-20 hover:bg-alto'><p>03</p><h3 className='font-bold'>SURFACE GEOLOGY</h3></div>
                     </div>
                 </div>
