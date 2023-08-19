@@ -17,7 +17,7 @@ const PlanetsRoute: React.FC<PlanetsProps> = ({data}) => {
     
     return (
         <div className='flex flex-col gap-y-4 '>
-            <header className='flex flex-row items-center justify-between h-full px-8 border-b py-[0.1rem] border-dustygray border-opacity-20'>
+            <header className='flex tablet:flex-col tablet:items-center tablet:mx-auto tablet:py-2 tablet:children:border-2 laptop:flex-row  laptop:items-center laptop:justify-between h-full laptop:px-8 border-b py-[0.1rem] border-dustygray border-opacity-20'>
                 <h1 className='font-antonio text-[2rem] font-light text-white'>THE PLANETS</h1>
                 <div className='children:h-[4rem] flex flex-row gap-8 font-normal font-spartan text-[0.8rem] text-opacity-75 text-white children:cursor-pointer self-start '>
                     {data.map(planet => (

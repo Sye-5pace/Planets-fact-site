@@ -46,20 +46,22 @@ const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
     };
 
     return (
-        <div className='flex flex-col gap-y-[1.3rem] children:border-2'>
-            <div className='flex flex-row justify-center gap-[16.25rem] text-white children:border-2 h-[35rem]'>
+        <div className='flex flex-col tablet:gap-y-6 laptop:gap-y-[1.3rem] children:border-2'>
+            <div className='flex tablet:flex-col laptop:flex-row tablet:items-center tablet:mx-auto laptop:justify-center laptop:gap-[16.25rem] text-white children:border-2'>
                 {selectedTab === 'geology' ? (
                     <GeologyImage />
                 ) : (
                     <img src={imgSourceMap[selectedTab]} alt="planet" className='w-[28.625rem] h-[28.625rem] my-[2rem]' />
                 )}
-                <div className='font-spartan w-[21.875rem] flex flex-col gap-y-4'>
-                    <h1 className='text-[5rem] font-antonio'>{selectedPlanet?.name}</h1>
-                    <p>{contentMap[selectedTab]}</p>
-                    <p>
-                        Source: <a href={selectedPlanet?.overview.source} className='underline'>Wikipedia</a>
-                    </p>
-                    <div className='flex flex-col children:py-1 gap-y-3 children:px-4 children:cursor-pointer children:h-[3rem]'>
+                <div className='font-spartan tablet:flex-row tablet:items-center tablet:gap-[5.5625rem] laptop:w-[21.875rem] flex laptop:flex-col  laptop:gap-y-4'>
+                    <div className='tablet:w-[21.1875rem] tablet:gap-y-3 tablet:flex tablet:flex-col'>
+                        <h1 className='text-[5rem] font-antonio'>{selectedPlanet?.name}</h1>
+                        <p>{contentMap[selectedTab]}</p>
+                        <p>
+                            Source: <a href={selectedPlanet?.overview.source} className='underline'>Wikipedia</a>
+                        </p>
+                    </div>
+                    <div className='flex flex-col children:py-1 gap-y-3  children:px-4 children:cursor-pointer children:h-[3rem]'>
                         {tabOptions.map((tab, index) => (
                             <div
                                 key={tab.key}

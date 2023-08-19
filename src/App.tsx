@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import { BrowserRouter as Router, Route,Routes,Redirect } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom'
 import PlanetsRoute from './Components/PlanetsRoute'
 import PlanetFact from './Components/PlanetFact'
 import './Index.css'
