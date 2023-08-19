@@ -25,8 +25,13 @@ interface ImageType {
 export interface PlanetsProps {
     data: PlanetData[]
     selectedPlanet: PlanetData
+    planetName: string
 }
 
 export interface PlanetMetadataProps {
     selectedPlanet: PlanetData | undefined;
+}
+
+export interface ColorClassMap {
+    [key: string]: string;
 }
