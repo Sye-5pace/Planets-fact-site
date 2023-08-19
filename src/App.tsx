@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div className='flex flex-col w-full min-h-screen p-0 m-0 gap-y-[2.7rem] border-box bg-[url("../public/assets/background-stars.svg")] bg-blackpearl'>
+      <div className='flex flex-col w-full min-h-screen p-0 m-0 gap-y-[1rem] border-box bg-[url("../public/assets/background-stars.svg")] bg-blackpearl'>
           <PlanetsRoute data={data}/>
         <Routes>
           <Route path='/planet/:planetName' element={<PlanetFact data={data}/>}/>

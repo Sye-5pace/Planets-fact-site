@@ -12,8 +12,8 @@ const PlanetFact:React.FC<PlanetsProps> = ({data}) => {
     const GeologyImage: React.FC =()=>{
         return (
             <div className='flex flex-col mt-[1rem]'>
-                <img src={selectedPlanet?.images.planet} alt="Planet" />
-                <img  className='relative bottom-[6rem] w-[10.1875rem] self-center' src={selectedPlanet?.images.geology} alt="geology"/>
+                <img className='h-[25rem]' src={selectedPlanet?.images.planet} alt="Planet" />
+                <img  className='relative bottom-[6rem] w-[8rem] self-center' src={selectedPlanet?.images.geology} alt="geology"/>
             </div>
         )
     } 
@@ -31,8 +31,8 @@ const PlanetFact:React.FC<PlanetsProps> = ({data}) => {
     }
 
     return(
-        <div className='flex flex-col gap-y-[4rem] children:border-2'>
-            <div className='flex flex-row justify-center gap-[16.25rem] text-white children:border-2'>
+        <div className='flex flex-col gap-y-[1.3rem] children:border-2'>
+            <div className='flex flex-row justify-center gap-[16.25rem] text-white children:border-2 h-[35rem]'>
                 {selectedTab === 'geology' ? <GeologyImage/> : <img src={imgSource} alt="planet"  className='w-[28.625rem] h-[28.625rem] my-[2rem]'/> }
                 <div className='font-spartan w-[21.875rem] flex flex-col gap-y-4'>
                     <h1 className='text-[5rem] font-antonio'>{selectedPlanet?.name}</h1>

@@ -29,5 +29,4 @@ export interface PlanetsProps {
 
 export interface PlanetMetadataProps {
     selectedPlanet: PlanetData | undefined;
-
 }
