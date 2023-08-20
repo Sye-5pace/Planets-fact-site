@@ -6,8 +6,6 @@ import './Index.css'
 import data from './data.json'
 
 const App: React.FC = () => {
-  // const  [planetName ,setPlanetName ] = useState('Mercury')
-
 
   return (
     <Router>

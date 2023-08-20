@@ -24,8 +24,6 @@ interface ImageType {
 
 export interface PlanetsProps {
     data: PlanetData[]
-    selectedPlanet: PlanetData
-    planetName: string
 }
 
 export interface PlanetMetadataProps {
