@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom'
 import PlanetsRoute from './Components/PlanetsRoute'
 import PlanetFact from './Components/PlanetFact'
-import './Index.css'
+import './index.css'
 import data from './data.json'
 
 const App: React.FC = () => {
