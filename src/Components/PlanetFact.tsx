@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import type { PlanetsProps,ColorClassMap } from '../Interface';
 import PlanetMetadata from './PlanetMetadata';
+import SourceIcon from '../../public/assets/icon-source.svg'
 
 const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
     const { planetName } = useParams();
@@ -12,7 +13,7 @@ const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
     const GeologyImage: React.FC = () => (
         <div className='flex flex-col mt-[1rem]'>
             <img className='h-[25rem] mobile:h-[11rem]' src={selectedPlanet?.images.planet} alt="Planet" />
-            <img className='relative bottom-[6rem] w-[8rem] self-center mobile:w-[5rem] mobile:bottom-[4rem]' src={selectedPlanet?.images.geology} alt="geology" />
+            <img className='relative bottom-[6rem] w-[8rem] self-center mobile:w-[4.5rem] mobile:bottom-[4rem]' src={selectedPlanet?.images.geology} alt="geology" />
         </div>
     );
 
@@ -86,8 +87,8 @@ const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
                     <div className='mobile:flex-col mobile:items-center mobile:mx-[1.5rem] mobile:gap-y-3 mobile:text-center tablet:w-[21.1875rem]  tablet:gap-y-3 flex tablet:flex-col laptop:flex-col'>
                         <h1 className='text-[5rem] font-antonio mobile:text-[1.5rem]'>{selectedPlanet?.name}</h1>
                         <p>{contentMap[selectedTab]}</p>
-                        <p>
-                            Source: <a href={selectedPlanet?.overview.source} className='underline'>Wikipedia</a>
+                        <p className='flex flex-row items-center gap-2'>
+                            Source: <a href={selectedPlanet?.overview.source} className='flex flex-row items-center gap-1 underline cursor-pointer'>Wikipedia <img src={SourceIcon} className='w-3 h-3'/></a>
                         </p>
                     </div>
                     <div className='mobile:hidden flex flex-col children:py-1 gap-y-3  children:px-4 children:cursor-pointer children:h-[3rem]'>
