@@ -62,7 +62,7 @@ const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
     };
 
     return (
-        <div className='flex mobile:flex-col mobile:gap-y-4 tablet:gap-y-6 laptop:flex-row laptop:gap-y-[1.3rem]'>
+        <div className='flex  mobile:gap-y-4 tablet:gap-y-6 flex-col laptop:gap-y-[1.3rem]'>
             <div className='flex mobile:flex-col mobile:gap-y-4 mobile:items-center tablet:flex-col laptop:flex-row tablet:items-center tablet:mx-auto laptop:justify-center laptop:gap-[16.25rem] text-white'>
                 <div className=' w-full h-[3rem] border-b py-[0.1rem] border-dustygray border-opacity-20 mobile:children:h-full mobile:children:pt-2 mobile:flex mobile:justify-between mobile:items-center mobile:px-4 tablet:hidden laptop:hidden'>
                     {mobileTab.map((tab) => (
@@ -83,7 +83,7 @@ const PlanetFact: React.FC<PlanetsProps> = ({ data }) => {
                     <img src={imgSourceMap[selectedTab]} alt="planet" className='w-[28.625rem] h-[28.625rem] my-[2rem] mobile:w-[11rem] mobile:h-[11rem]' />
                 )}
                 <div className='font-spartan mobile:flex-col tablet:flex-row tablet:items-center tablet:gap-[3.5625rem] laptop:w-[21.875rem] flex laptop:flex-col  laptop:gap-y-4'>
-                    <div className='mobile:flex-col mobile:items-center mobile:mx-[1.5rem] mobile:gap-y-3 mobile:text-center tablet:w-[21.1875rem]  tablet:gap-y-3 flex tablet:flex-col'>
+                    <div className='mobile:flex-col mobile:items-center mobile:mx-[1.5rem] mobile:gap-y-3 mobile:text-center tablet:w-[21.1875rem]  tablet:gap-y-3 flex tablet:flex-col laptop:flex-col'>
                         <h1 className='text-[5rem] font-antonio mobile:text-[1.5rem]'>{selectedPlanet?.name}</h1>
                         <p>{contentMap[selectedTab]}</p>
                         <p>
