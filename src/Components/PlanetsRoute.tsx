@@ -1,10 +1,10 @@
 import React,{useState, useEffect} from 'react'
-import type { PlanetsProps,ColorClassMap } from '../Interface';
+import type { PlanetData,ColorClassMap } from '../Interface';
 import { Link,useNavigate } from 'react-router-dom';
 import MenuIcon from '../../public/assets/icon-hamburger.svg'
 import ModalNav from '../../public/assets/icon-chevron.svg'
 
-const data = [
+const data: PlanetData[] = [
     {
       "name": "Mercury",
       "color": "pelorous",
@@ -209,7 +209,7 @@ const data = [
   
 
 
-const PlanetsRoute: React.FC<PlanetsProps> = () => {
+const PlanetsRoute: React.FC = () => {
     const [ isClicked, setIsClicked] = useState(false)
     
     const colorMap: ColorClassMap = {

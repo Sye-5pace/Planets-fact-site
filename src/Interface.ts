@@ -22,9 +22,6 @@ interface ImageType {
     geology: string;
 }
 
-// export interface PlanetsProps {
-//     data: PlanetData[]
-// }
 
 export interface PlanetMetadataProps {
     selectedPlanet: PlanetData | undefined;
