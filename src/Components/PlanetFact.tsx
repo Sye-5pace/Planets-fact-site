@@ -25,7 +25,7 @@ const data = [
       "radius": "2,439.7 KM",
       "temperature": "430°c",
       "images": {
-        "planet": "../../public/assets/planetmercury.svg",
+        "planet": "../../public/assets/planet-mercury.svg",
         "internal": "../../public/assets/planet-mercury-internal.svg",
         "geology": "../../public/assets/geology-mercury.png"
       }
