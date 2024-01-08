@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import type { PlanetsProps,ColorClassMap } from '../Interface';
+import type { PlanetData,ColorClassMap } from '../Interface';
 import PlanetMetadata from './PlanetMetadata';
 import SourceIcon from '../../public/assets/icon-source.svg'
 
-const data = [
+const data:PlanetData[]  = [
     {
       "name": "Mercury",
       "color": "pelorous",
@@ -210,7 +210,7 @@ const data = [
 
 
 
-const PlanetFact: React.FC<PlanetsProps> = () => {
+const PlanetFact: React.FC = () => {
     const { planetName } = useParams();
     const [selectedTab, setSelectedTab] = useState<string>('overview');
 
