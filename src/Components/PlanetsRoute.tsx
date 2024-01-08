@@ -229,7 +229,7 @@ const PlanetsRoute: React.FC = () => {
         const handleDefaultRoute = () => {
             const currentPath = window.location.pathname;
             if ( currentPath === '/' || currentPath === '/planet'){
-                navigate('/planet/mercury')
+                navigate('/planet/Mercury')
             }
         }
 
