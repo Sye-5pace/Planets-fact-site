@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import type { PlanetsProps,ColorClassMap } from '../Interface';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import MenuIcon from '../../public/assets/icon-hamburger.svg'
 import ModalNav from '../../public/assets/icon-chevron.svg'
 
@@ -222,6 +222,19 @@ const PlanetsRoute: React.FC<PlanetsProps> = () => {
         java: 'border-java',
         royalblue: 'border-royalblue'
     };
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleDefaultRoute = () => {
+            const currentPath = window.location.pathname;
+            if ( currentPath === '/' || currentPath === '/planet'){
+                navigate('/planet/mercury')
+            }
+        }
+
+        handleDefaultRoute();
+    }, [navigate])
 
     const MobileModal: React.FC = () => {
         
